@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 标签属性：
+			readonly:只读
+			maxlength：最大长度
+			placeholder:提示信息
+			size：文本框长度
+		-->
+		<form action="#" method="post" >
+			昵称：<input type="text" name="nickname" readonly="readonly" maxlength="10" placeholder="请输入昵称" /><br />
+			密码：<input type="password" name="password" /><br />
+			确认密码：<input type="password" name="prepassword" /><br />
+			性别：男<input type="radio" name="sex" value="man" />
+				  女<input type="radio" name="sex" value="woman" /><br />
+			爱好：足球<input type="checkbox" name="hobby" value="football" />
+				蓝球<input type="checkbox" name="hobby" value="basketball" />
+				棒球<input type="checkbox" name="hobby" value="baseball" /><br />
+			头像：<input type="file" name="file" /><br />
+			籍贯：<select name="province">
+					<option>---请选择---</option>
+					<option value="beijing">北京</option>
+					<option value="shanghai">上海</option>
+					<option value="guangzhou">广州</option>
+					<option value="shenzhen">深圳</option>
+			</select><br/>
+			自我介绍：<textarea cols="50" rows="4" name="introduce"></textarea><br />
+			<input type="submit" value="确认" />
+			<input type="reset" value="重写" />
+		</form>
+	</body>
+</html>
