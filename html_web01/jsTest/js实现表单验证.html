@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function checkform(){
+				var nickname = document.getElementById("nickname").value;
+				var password = document.getElementById("password").value;
+				var prepassword = document.getElementById("prepassword").value;
+				if(nickname.length<=0){
+					alert("昵称不能为空");
+					return false;
+				}
+				if(password.length<=6 || prepassword.length<=6 || password!=prepassword){
+					alert("密码过短，或2次输入不一致");
+					return false;
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<!-- 标签属性：
+			readonly:只读
+			maxlength：最大长度
+			placeholder:提示信息
+			size：文本框长度
+		-->
+		<form action="#" method="post" onsubmit="return checkform()">
+			昵称：<input type="text" name="nickname" id="nickname" /><br />
+			密码：<input type="password" name="password" id="password" /><br />
+			确认密码：<input type="password" name="prepassword" id="prepassword" /><br />
+			性别：男<input type="radio" name="sex" value="man" />
+				  女<input type="radio" name="sex" value="woman" /><br />
+			爱好：足球<input type="checkbox" name="hobby" value="football" />
+				蓝球<input type="checkbox" name="hobby" value="basketball" />
+				棒球<input type="checkbox" name="hobby" value="baseball" /><br />
+			头像：<input type="file" name="file" /><br />
+			籍贯：<select name="province">
+					<option>---请选择---</option>
+					<option value="beijing">北京</option>
+					<option value="shanghai">上海</option>
+					<option value="guangzhou">广州</option>
+					<option value="shenzhen">深圳</option>
+			</select><br/>
+			自我介绍：<textarea cols="50" rows="4" name="introduce"></textarea><br />
+			<input type="submit" value="确认" />
+			<input type="reset" value="重写" />
+		</form>
+	</body>
+</html>
