@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
+		<script>
+/*			function addImage(){
+				document.getElementById("img").style.display = "block";
+			}*/
+			
+			$(function(){
+				$("#btn").click(function(){
+					$("#img").show();
+				})
+			});
+			
+			/* jQuery转换Dom转换方式：
+				$("#img")[0]
+				$("#img").get(0)
+			*/
+			
+			/* Dom转换为jQuery对象
+			 	$(Dom对象)，例如$(document.getElementById("btn"))
+			*/
+			
+		</script>
+		<style>
+			img{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="点击弹出图片" onclick="addImage()" id="btn"/>
+		<img src="../css/milan.jpg" width="180" id="img"/>
+	</body>
+</html>

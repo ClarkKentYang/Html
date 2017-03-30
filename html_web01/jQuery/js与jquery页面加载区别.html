@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
+		<script>
+			window.onload = function(){
+				alert("js!!!");
+			}
+			
+			window.onload = function(){
+				alert("js second!!!");//js存在覆盖问题
+			}
+			
+			//先弹出jquery，因为jquery的加载比js要快
+			jQuery(document).ready(function(){
+				alert("jQuery!!!");
+			});
+			
+			$(document).ready(function(){
+				alert("jQuery second");//jQuery不存在覆盖问题，顺序执行
+			});
+			
+			$(function(){
+				alert("jQuery thrid!");//最简洁方式
+			});
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

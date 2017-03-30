@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
+		<script>
+			$(function(){
+				time = setInterval("addImg()",3000);
+			});
+			
+			function addImg(){//3秒后出现
+				$("img").show();
+				clearInterval(time);
+				time = setInterval("delImg()",3000);
+				
+			}
+			
+			function delImg(){//3秒后消失
+				$("img").hide();
+				clearInterval(time);
+				setInterval("addImg()",3000);
+				
+			}
+			
+		</script>
+		<style>
+			img{
+				display: none;
+			}
+		</style>
+
+	</head>
+	<body>
+		<img src="../css/milan.jpg" width="180" id="img"/>
+	</body>
+</html>

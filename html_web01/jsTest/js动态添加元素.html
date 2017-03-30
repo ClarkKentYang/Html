@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function addElement(){
+				var ul = document.getElementById("ul1");
+				var liNew = document.createElement("li");
+				var liText = document.createTextNode("5");
+				liNew.appendChild(liText);
+				ul.appendChild(liNew);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="添加一个li" onclick="addElement()" />
+		<ul id="ul1">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		
+	</body>
+</html>
